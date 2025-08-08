@@ -7,7 +7,7 @@ namespace CounterApp.ViewModels
     public class CounterViewModel : INotifyPropertyChanged
     {
         private int _count = 0;
-        private string _message = "Click button to start count";
+        private string _message;
 
         public CounterViewModel()
         {
@@ -21,6 +21,14 @@ namespace CounterApp.ViewModels
             set
             {
                 _count = value;
+                if (_count == 1)
+                {
+                    Message = "Count is 1";
+                }
+                else
+                {
+                    Message = $"Count is {_count}";
+                }
                 OnPropertyChanged();
 
                 // Notify that CanExecute may have changed
@@ -34,6 +42,7 @@ namespace CounterApp.ViewModels
             set
             {
                 _message = value;
+                OnPropertyChanged();
             }
         }
 

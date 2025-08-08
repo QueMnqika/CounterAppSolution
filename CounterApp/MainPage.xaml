@@ -4,17 +4,24 @@
              x:Class="CounterApp.MainPage">
 
     <VerticalStackLayout Padding="20" Spacing="10">
-        <Label Text="{Binding Message}"
+        <Label Text="Click to start Count"
                FontSize="24"
                HorizontalTextAlignment="Center"/>
+        
         <Label Text="{Binding Count}"
                FontSize="48"
                HorizontalTextAlignment="Center"/>
+        
         <Button Text="Click to start count"
                 Command="{Binding IncrementCommand}"
                 HorizontalOptions="Center"/>
+        
         <Button Text="Reset"
                 Command="{Binding ResetCommand}"
                 HorizontalOptions="Center"/>
+        
+        <Label Text="{Binding Message}"
+       FontSize="24"
+       HorizontalTextAlignment="Center"/>
     </VerticalStackLayout>
 </ContentPage>
